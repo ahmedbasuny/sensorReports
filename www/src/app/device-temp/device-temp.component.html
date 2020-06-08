@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br/><br/>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter simulated values" [(ngModel)]="value" name="value">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="saveValues()">Save</button>
+      </form>
+      <br/>
+
+      <mat-divider></mat-divider>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="deviceId">
+            <mat-header-cell *matHeaderCellDef>Device Id</mat-header-cell>
+            <mat-cell *matCellDef="let element; let index = index">{{element.deviceId}}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="temp">
+            <mat-header-cell *matHeaderCellDef>Temperature</mat-header-cell>
+            <mat-cell *matCellDef="let element; let index = index">{{element.temp}}</mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns" (click)="getDeviceData(row)"></mat-row>
+        </table>
+
+        <mat-paginator #mainPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+      <br/>
+      <mat-divider></mat-divider>
+
+    </div>
+    <div class="col">
+      <br/>
+      <br/><br/><br/><br/><br/><br/>
+      <div class="mat-elevation-z8" *ngIf="deviceDataSource">
+        <table mat-table [dataSource]="deviceDataSource">
+
+          <ng-container matColumnDef="deviceId">
+            <mat-header-cell *matHeaderCellDef>Device Id</mat-header-cell>
+            <mat-cell *matCellDef="let element; let index = index">{{element.deviceId}}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="temp">
+            <mat-header-cell *matHeaderCellDef>Temperature</mat-header-cell>
+            <mat-cell *matCellDef="let element; let index = index">{{element.temp}}</mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns" (click)="getDeviceData(row)"></mat-row>
+        </table>
+
+        <mat-paginator #devicePaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+      <br/>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+</div>
