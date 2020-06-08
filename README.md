@@ -32,10 +32,10 @@ Download the app. Extract the zip file. go inside project folder and run this ma
 * Once the app is up and running. you can check API documentation from this url
 [Swagger API Documentation](http://localhost:1010/swagger-ui.html)
 * You can check DeviceTempController
-* Ex: http://localhost:8080/v1.0/devicetemp/{value}       GET     parse hex value into decmail, extract data and save it
-* Ex: http://localhost:8080/v1.0/devicetemp/latest 		  GET     get all devices with the latest temp degree
-* Ex: http://localhost:8080/v1.0/devicetemp/device/{deviceId}     GET   get all temp for a specific device by device id
-* Ex: http://localhost:8080/v1/devicetemp  				  Get     get all data in DB
+* Ex: http://localhost:1010/v1.0/devicetemp/{value}       GET     parse hex value into decmail, extract data and save it
+* Ex: http://localhost:1010/v1.0/devicetemp/latest 		  GET     get all devices with the latest temp degree
+* Ex: http://localhost:1010/v1.0/devicetemp/device/{deviceId}     GET   get all temp for a specific device by device id
+* Ex: http://localhost:1010/v1/devicetemp  				  Get     get all data in DB
 
 ## DB using H2
 * The project using H2 simple in memory DB.
@@ -47,9 +47,9 @@ Download the app. Extract the zip file. go inside project folder and run this ma
 
 ## Actuator
 * The project uses spring actuator for monitoring.
-* [actuator metrics](http://localhost:8080/actuator/metrics)
-* [actuator env](http://localhost:8080/actuator/env)
-* [actuator health](http://localhost:8080/actuator/health)
+* [actuator metrics](http://localhost:1010/actuator/metrics)
+* [actuator env](http://localhost:1010/actuator/env)
+* [actuator health](http://localhost:1010/actuator/health)
 
 
 
