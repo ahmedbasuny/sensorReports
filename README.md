@@ -18,8 +18,9 @@ Download the app. Extract the zip file. go inside project folder and run this ma
 `$ mvn spring-boot:run`
 
 * Angular
-npm install
-ng s
+`$ npm install`
+
+`$ ng s`	
 
 ## Built With
 * SpringBoot
